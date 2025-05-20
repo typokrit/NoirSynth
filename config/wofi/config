@@ -1,0 +1,11 @@
+show=drun
+width=600
+height=400
+columns=1
+prompt="Run:"
+term=kitty
+allow_images=false
+insensitive=true
+no_actions=true
+allow_markup=false
+

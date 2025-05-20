@@ -1,0 +1,42 @@
+* {
+  font: "JetBrainsMono Nerd Font 18"
+  background: #000000cc
+  foreground: #d0b3ff
+  border-color: #a64dff
+  selected: #a64dff
+}
+
+window {
+  transparency: "real"
+  background-color: @background
+  border: 2px solid @border-color
+  border-radius: 12px
+  location: center
+  width: 600px
+}
+
+mainbox {
+  layout: horizontal
+  spacing: 20px
+  children: [listview]
+}
+
+listview {
+  lines: 1
+  columns: 4
+  spacing: 15px
+}
+
+element {
+  padding: 20px
+  border: 2px solid @border-color
+  border-radius: 10px
+  background-color: #1a001a
+  text-color: @foreground
+}
+
+element selected {
+  background-color: @selected
+  text-color: #000000
+}
+

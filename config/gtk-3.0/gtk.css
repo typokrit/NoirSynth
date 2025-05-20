@@ -1,0 +1,6 @@
+window, dialog, .background {
+  background-color: rgba(20, 20, 30, 0.4); /* transparent black/purple */
+  background-image: none;
+  box-shadow: none;
+}
+

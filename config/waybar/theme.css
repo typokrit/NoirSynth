@@ -1,0 +1,11 @@
+@define-color bar-bg rgba(20, 0, 30, 0.9);  /* dark translucent purple */
+
+@define-color main-bg #1a0a2a;              /* deep black-purple */
+@define-color main-fg #c0a8ff;              /* soft lavender/purple */
+
+@define-color wb-act-bg #6a3ea1;             /* medium purple */
+@define-color wb-act-fg #e6dbff;             /* light purple */
+
+@define-color wb-hvr-bg #8e61d2;             /* lighter purple hover */
+@define-color wb-hvr-fg #ffffff;             /* white on hover */
+
