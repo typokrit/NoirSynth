@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Linking config files..."
+echo "🔗 Linking config files..."
 
 CONFIGS=(
   hypr
@@ -23,7 +23,30 @@ for config in "${CONFIGS[@]}"; do
   ln -sf "$HOME/dotfiles/config/$config" "$HOME/.config/$config"
 done
 
-echo "Linking .zshrc..."
+echo "🔗 Linking .zshrc..."
 ln -sf "$HOME/dotfiles/home/.zshrc" "$HOME/.zshrc"
 
-echo "Done!"
+echo "🔗 Linking .desktop entry..."
+mkdir -p "$HOME/.local/share/applications"
+ln -sf "$HOME/dotfiles/.local/share/applications/nvim.desktop" "$HOME/.local/share/applications/nvim.desktop"
+
+echo "🔗 Linking custom scripts..."
+
+SCRIPTS=(
+  nvim-launch
+  kbbacklight
+  sleep
+)
+
+mkdir -p "$HOME/.local/bin"
+
+for script in "${SCRIPTS[@]}"; do
+  src="$HOME/dotfiles/config/scripts/$script.sh"
+  dest="$HOME/.local/bin/$script"
+  ln -sf "$src" "$dest"
+  chmod +x "$dest"
+  echo "✅ Linked $script"
+done
+
+echo -e "\n🎉 All configs and scripts linked!"
+

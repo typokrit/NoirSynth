@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Neovim
+Comment=Launch Neovim in Kitty with custom padding
+Exec=kitty -e nvim-launch
+Terminal=false
+Type=Application
+Categories=Utility;TextEditor;
